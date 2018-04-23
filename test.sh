@@ -14,4 +14,4 @@ chown -R user01:public public
 chown -R user01:privat privat
 chmod 774 /home/public
 chmod  740 /home/privat
-for user in user01 user02 user03 user04 user05; do echo i$user && sudo -u "$user" ls /home/public && sudo -u "$user" ls /home/privat && sudo -u "$user" mkdir /home/public/"$user" && sudo -u "$user" mkdir /home/privat/"$user"; done 
+for user in user01 user02 user03 user04 user05; do echo results for $user :  && sudo -u "$user" ls /home/public && sudo -u "$user" ls /home/privat && sudo -u "$user" mkdir /home/public/"$user" && sudo -u "$user" mkdir /home/privat/"$user"; done 
