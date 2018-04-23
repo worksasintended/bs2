@@ -2,6 +2,8 @@
 for user in user01 user02 user03 user04 user05; do useradd -m "$user"; done
 mkdir -p /home/privat
 mkdir -p /home/public
+cp /etc/passwd /home/privat
+cp /etc/passwd /home/public
 cd /home
 groupadd privat
 groupadd public
@@ -14,4 +16,20 @@ chown -R user01:public public
 chown -R user01:privat privat
 chmod 774 /home/public
 chmod  740 /home/privat
-for user in user01 user02 user03 user04 user05; do echo results for $user :  && sudo -u "$user" ls /home/public && sudo -u "$user" ls /home/privat && sudo -u "$user" mkdir /home/public/"$user" && sudo -u "$user" mkdir /home/privat/"$user"; done 
+for user in user01 user02 user03 user04 user05; do \
+  echo "------------------------------------"
+  echo "results for $user :"  &&\
+  echo "ls /home/public:" &&\
+  sudo -u "$user" ls /home/public &&\
+  echo "ls /home/private" &&\
+  sudo -u "$user" ls /home/privat &&\
+  echo "mkdir /home/public/$user" &&\
+  sudo -u "$user" mkdir /home/public/"$user" &&\
+  echo "mkdir /home/privat/$user" &&\
+  sudo -u "$user" mkdir /home/privat/"$user";\ 
+done 
+  echo "----------------------------------------"
+echo "\n ls /home/privat" 
+ls /home/privat
+echo "ls /home/public"
+ls /home/public
