@@ -6,6 +6,7 @@ RUN apt-get update && apt-get -y  install \
   tree \
   watch \
   whois \
-  nano 
+  nano \
+  sudo  
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* 
 
