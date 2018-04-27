@@ -3,5 +3,5 @@ docker run \
   -it \
   --rm \
   --name "bs" \
-  -v $(pwd)/test.sh:/test.sh \
+  -v $(pwd)/$1:/script.sh \
   bs bash
