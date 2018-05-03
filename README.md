@@ -1,6 +1,8 @@
 # bs2
 lecture "betriebssysteme 2"
 
-to mount test-script use "run.sh <test-script>"
+to mount test-script use ```run.sh <test-script>```
 
-execute script in docker with /script.sh
+e.g. ```run.sh task04.sh```
+
+execute script inside dockercontainer by  ```/script.sh```
