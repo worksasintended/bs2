@@ -1,8 +1,12 @@
 # bs2
 lecture "betriebssysteme 2"
 
-to mount test-script use ```run.sh <test-script>```
+A docker container similar to the testsystem in laboritory. Build the docker by executing ```build.sh```
+
+To mount test-script use ```run.sh <test-script>```
 
 e.g. ```run.sh zettel04.sh```
 
-execute script inside dockercontainer by  ```/script.sh```
+This will execute the docker image and mount the corresponding script into its rootfolder.
+
+Execute script inside dockercontainer by  ```/script.sh```
